@@ -1,12 +1,22 @@
 # Credits, Notes, and Reference
 
+Documentation:
+
   + [OpenSSL Docs](https://www.openssl.org/docs/man1.1.0/apps/crl.html)
   + [Ruby OpenSSL Source](https://github.com/ruby/openssl)
   + [Ruby `OpenSSL::X509::CRL` Docs](https://ruby-doc.org/stdlib-2.4.2/libdoc/openssl/rdoc/OpenSSL/X509/CRL.html)
+  + [Ruby `OpenSSL::X509::Revoked` Docs](http://ruby-doc.org/stdlib-2.5.0/libdoc/openssl/rdoc/OpenSSL/X509/Revoked.html)
+  + [Ruby `OpenSSL::X509::Extension` Docs](http://ruby-doc.org/stdlib-2.5.0/libdoc/openssl/rdoc/OpenSSL/X509/Extension.html)
+  + [Ruby `OpenSSL::BN` (Serial Number) Docs](http://ruby-doc.org/stdlib-2.4.0/libdoc/openssl/rdoc/OpenSSL/BN.html)
+
+Tutorials, examples, and guides:
+
   + [Parsing a CRL with OpenSSL](https://langui.sh/2010/01/10/parsing-a-crl-with-openssl/)
   + [Reading CRLs in Windows with Ruby](http://seanbachelder.me/2016/06/17/reading-crls-in-windows-with-ruby.html)
 
 ## Initial Parsing Attempts
+
+When opening the CRL file in a text editor, it appears to be binary, which would suggest it's in DER format (not PEM format).
 
 Using the command-line to parse a CRL from file:
 
@@ -68,3 +78,13 @@ Revoked Certificates:
 ```
 
 The `Revoked Certificates` don't seem to be sorted by `Revocation Date`.
+
+## Ruby Parsing Attempts
+
+File sizes:
+
+  + `.crl`: 13M
+  + `metadata.json`: 315B
+  + `revocations.json`: 75M (with extensions)
+  + `revocations.csv`: 9.1M (without extensions)
+  + `revocations.csv`: 21M (with extensions)
