@@ -4,6 +4,6 @@
   "last_update": "2018-03-01 08:00:00 UTC",
   "next_update": "2018-03-08 17:00:00 UTC",
   "revocations_count": 306926,
-  "earlist_revocation_at": "2016-06-10 14:08:32 UTC",
+  "earliest_revocation_at": "2016-06-10 14:08:32 UTC",
   "latest_revocation_at": "2018-03-01 07:47:29 UTC"
 }

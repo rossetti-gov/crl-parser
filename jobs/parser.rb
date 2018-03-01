@@ -23,7 +23,7 @@ metadata = {
   last_update: crl.last_update.to_s,
   next_update: crl.next_update.to_s,
   revocations_count: revocations.count, #> 306926
-  earlist_revocation_at: revocations.first.time,
+  earliest_revocation_at: revocations.first.time,
   latest_revocation_at: revocations.last.time
 }
 
