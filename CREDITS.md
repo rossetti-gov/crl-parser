@@ -87,3 +87,4 @@ File sizes:
   + `metadata.json`: 315B
   + `revocations.json`: 75M (with extensions)
   + `revocations.csv`: 9.1M (without extensions)
+  + `revocations.csv`: 21M (with extensions)

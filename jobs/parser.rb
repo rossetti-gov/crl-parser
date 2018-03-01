@@ -59,14 +59,14 @@ puts "PARSING REVOKED CERTIFICATES..."
 #
 
 revocations_filepath = File.join(crl_dir, "revocations.csv")
-headers = ["serial_number", "revoked_at"] # todo: think about how to add "extensions" as well
+headers = ["serial_number", "revoked_at", "extensions"]
 
 CSV.open(revocations_filepath, "w", :write_headers=> true, :headers => headers) do |csv|
   revocations.each do |revocation|
     csv << [
       revocation.serial.to_s,
-      revocation.time.to_s #,
-      #revocation.extensions.map{ |ext| ext.to_h }
+      revocation.time.to_s,
+      revocation.extensions.map{|ext| ext.to_s }.join(" | ") # pipe-delimited string like "CRLReason = Cessation Of Operation | invalidityDate = ..20160610050000Z"
     ]
   end
 end
