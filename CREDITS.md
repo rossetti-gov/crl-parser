@@ -83,6 +83,7 @@ The `Revoked Certificates` don't seem to be sorted by `Revocation Date`.
 
 File sizes:
 
-  + `.crl` file: 13M
-  + `metadata.json` file: 315B
-  + `revocations.json` file: 75M
+  + `.crl`: 13M
+  + `metadata.json`: 315B
+  + `revocations.json`: 75M (with extensions)
+  + `revocations.csv`: 9.1M (without extensions)

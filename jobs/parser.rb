@@ -1,5 +1,6 @@
 require "openssl"
 require "json"
+require "csv"
 require "pry"
 
 CRL_URL = "http://crl.disa.mil/crl/DODIDCA_42.crl" # this is the only CRL URL I know about at the moment.
@@ -35,16 +36,37 @@ end
 
 puts "PARSING REVOKED CERTIFICATES..."
 
-revs = [] # maybe faster than mapping 300K items in place...
-revocations.each do |revocation|
-  revs << {
-    serial_number: revocation.serial.to_s,
-    revoked_at: revocation.time.to_s,
-    extensions: revocation.extensions.map{ |ext| ext.to_h }
-  }
-end
+#
+# REVOCATIONS.JSON
+#
+#
+#revs = [] # maybe faster than mapping 300K items in place...
+#revocations.each do |revocation|
+#  revs << {
+#    serial_number: revocation.serial.to_s,
+#    revoked_at: revocation.time.to_s,
+#    extensions: revocation.extensions.map{ |ext| ext.to_h }
+#  }
+#end
+#
+#revocations_filepath = File.join(crl_dir, "revocations.json")
+#File.open(revocations_filepath ,"w") do |f|
+#  f.write(JSON.pretty_generate(revs)) # is there a way to write incrementally?
+#end
 
-revocations_filepath = File.join(crl_dir, "revocations.json")
-File.open(revocations_filepath ,"w") do |f|
-  f.write(JSON.pretty_generate(revs)) # is there a way to write incrementally?
+#
+# REVOCATIONS.CSV
+#
+
+revocations_filepath = File.join(crl_dir, "revocations.csv")
+headers = ["serial_number", "revoked_at"] # todo: think about how to add "extensions" as well
+
+CSV.open(revocations_filepath, "w", :write_headers=> true, :headers => headers) do |csv|
+  revocations.each do |revocation|
+    csv << [
+      revocation.serial.to_s,
+      revocation.time.to_s #,
+      #revocation.extensions.map{ |ext| ext.to_h }
+    ]
+  end
 end
