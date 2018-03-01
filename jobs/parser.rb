@@ -33,18 +33,18 @@ File.open(metadata_filepath, "w") do |f|
   f.write(JSON.pretty_generate(metadata))
 end
 
-#puts "PARSING REVOKED CERTIFICATES..."
-#
-#r = []
-#revocations.each do |revocation|
-#  r << {
-#    serial_number: revocation.serial.to_s,
-#    revoked_at: revocation.time.to_s,
-#    extensions: revocation.extensions.map{ |ext| ext.to_h }
-#  }
-#end
-#
-#revocations_filepath = File.join(crl_dir, "revocations.json")
-#File.open(revocations_filepath ,"w") do |f|
-#  f.write(r.to_json)
-#end
+puts "PARSING REVOKED CERTIFICATES..."
+
+revs = [] # maybe faster than mapping 300K items in place...
+revocations.each do |revocation|
+  revs << {
+    serial_number: revocation.serial.to_s,
+    revoked_at: revocation.time.to_s,
+    extensions: revocation.extensions.map{ |ext| ext.to_h }
+  }
+end
+
+revocations_filepath = File.join(crl_dir, "revocations.json")
+File.open(revocations_filepath ,"w") do |f|
+  f.write(JSON.pretty_generate(revs)) # is there a way to write incrementally?
+end

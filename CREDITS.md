@@ -78,3 +78,11 @@ Revoked Certificates:
 ```
 
 The `Revoked Certificates` don't seem to be sorted by `Revocation Date`.
+
+## Ruby Parsing Attempts
+
+File sizes:
+
+  + `.crl` file: 13M
+  + `metadata.json` file: 315B
+  + `revocations.json` file: 75M
