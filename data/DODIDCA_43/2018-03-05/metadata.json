@@ -1,0 +1,9 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID CA-43",
+  "version": "1",
+  "last_update": "2018-03-05 08:00:00 UTC",
+  "next_update": "2018-03-12 17:00:00 UTC",
+  "revocations_count": 326194,
+  "earliest_revocation_at": "2016-06-10 14:17:33 UTC",
+  "latest_revocation_at": "2018-03-05 07:45:29 UTC"
+}

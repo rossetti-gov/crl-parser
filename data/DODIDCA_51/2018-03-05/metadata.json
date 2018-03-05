@@ -1,0 +1,9 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID CA-51",
+  "version": "1",
+  "last_update": "2018-03-05 08:00:00 UTC",
+  "next_update": "2018-03-12 17:00:00 UTC",
+  "revocations_count": 1,
+  "earliest_revocation_at": "2017-09-22 19:52:54 UTC",
+  "latest_revocation_at": "2017-09-22 19:52:54 UTC"
+}
