@@ -1,0 +1,9 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID CA-40",
+  "version": "1",
+  "last_update": "2018-03-06 08:00:00 UTC",
+  "next_update": "2018-03-13 17:00:00 UTC",
+  "revocations_count": 0,
+  "earliest_revocation_at": null,
+  "latest_revocation_at": null
+}
