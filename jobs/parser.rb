@@ -6,10 +6,15 @@ require "pry"
 require "active_support/core_ext/object/try"
 
 class Parser
-  attr_accessor :crl_url
+  attr_reader :crl_url, :overwrite_crl
 
-  def initialize(crl_url)
+  def initialize(crl_url:, overwrite_crl: false)
     @crl_url = crl_url
+    @overwrite_crl = overwrite_crl
+  end
+
+  def overwrite_crl?
+    overwrite_crl == true
   end
 
   def perform
@@ -25,7 +30,7 @@ class Parser
   end
 
   def download_crl
-    IO.copy_stream(open(crl_url), crl_filepath) unless File.exist?(crl_filepath)
+    IO.copy_stream(open(crl_url), crl_filepath) unless File.exist?(crl_filepath) && !overwrite_crl?
     return OpenSSL::X509::CRL::new(File.read(crl_filepath))
   end
 
@@ -39,10 +44,14 @@ class Parser
       version: crl.version.to_s,
       last_update: crl.last_update.to_s,
       next_update: crl.next_update.to_s,
-      revocations_count: revocations.count, #> 306926
-      earliest_revocation_at: revocations.first.try(:time),
-      latest_revocation_at: revocations.last.try(:time)
+      revocations_count: revocations.count,
+      earliest_revocation: revocation_metadata(revocations.first),
+      latest_revocation: revocation_metadata(revocations.last)
     }
+  end
+
+  def revocation_metadata(revoked)
+    Revocation.new(revoked).metadata if revoked
   end
 
   def crl_filename
@@ -70,43 +79,30 @@ class Parser
       f.write(JSON.pretty_generate(metadata))
     end
   end
-
-  #def write_revocations_to_json
-  #  revs = [] # maybe faster than mapping 300K items in place...
-  #  revocations.each do |revocation|
-  #    revs << {
-  #      serial_number: revocation.serial.to_s,
-  #      revoked_at: revocation.time.to_s,
-  #      extensions: revocation.extensions.map{ |ext| ext.to_h }
-  #    }
-  #  end
-  #
-  #  revocations_filepath = File.join(crl_dir, "revocations.json")
-  #  File.open(revocations_filepath ,"w") do |f|
-  #    f.write(JSON.pretty_generate(revs)) # is there a way to write incrementally?
-  #  end
-  #end
-
-  #def write_revocations_to_csv
-  #  revocations_filepath = File.join(crl_dir, "revocations.csv")
-  #  headers = ["serial_number", "revoked_at", "extensions"]
-  #
-  #  CSV.open(revocations_filepath, "w", :write_headers=> true, :headers => headers) do |csv|
-  #    revocations.each do |revocation|
-  #      csv << [
-  #        revocation.serial.to_s,
-  #        revocation.time.to_s,
-  #        revocation.extensions.map{|ext| ext.to_s }.join(" | ") # pipe-delimited string like "CRLReason = Cessation Of Operation | invalidityDate = ..20160610050000Z"
-  #      ]
-  #    end
-  #  end
-  #end
 end
 
-KNOWN_CRL_URLS = [40, 41, 42, 43, 44, 49, 50, 51, 52].map{ |i|
+class Revocation
+  attr_reader :revoked
+
+  # @param revoked [OpenSSL::X509::Revoked]
+  def initialize(revoked)
+    @revoked = revoked
+  end
+
+  def metadata
+    {
+      serial_number: revoked.serial.to_s,
+      revoked_at: revoked.time.to_s,
+      extensions: revoked.extensions.map{ |ext| ext.to_h }
+    }
+  end
+end
+
+crl_urls = [40, 41, 42, 43, 44, 49, 50, 51, 52].map{ |i|
   "http://crl.disa.mil/crl/DODIDCA_#{i}.crl"
 }
+crl_urls << "http://sspweb.managed.entrust.com/CRLs/EMSSSPCA2.crl"
 
-KNOWN_CRL_URLS.each do |crl_url|
-  Parser.new(crl_url).perform
+crl_urls.each do |crl_url|
+  Parser.new(crl_url: crl_url, overwrite_crl: false).perform
 end

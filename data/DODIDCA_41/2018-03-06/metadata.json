@@ -4,6 +4,31 @@
   "last_update": "2018-03-06 08:00:00 UTC",
   "next_update": "2018-03-13 17:00:00 UTC",
   "revocations_count": 383567,
-  "earliest_revocation_at": "2016-06-10 14:12:23 UTC",
-  "latest_revocation_at": "2018-03-06 07:59:42 UTC"
+  "earliest_revocation": {
+    "serial_number": "99",
+    "revoked_at": "2016-06-10 14:12:23 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20160610050000Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "1978454",
+    "revoked_at": "2018-03-06 07:59:42 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Key Compromise",
+        "critical": false
+      }
+    ]
+  }
 }

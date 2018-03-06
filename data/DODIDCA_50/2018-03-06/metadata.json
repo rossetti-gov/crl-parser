@@ -4,6 +4,18 @@
   "last_update": "2018-03-06 08:00:00 UTC",
   "next_update": "2018-03-13 17:00:00 UTC",
   "revocations_count": 1,
-  "earliest_revocation_at": "2017-12-20 21:59:03 UTC",
-  "latest_revocation_at": "2017-12-20 21:59:03 UTC"
+  "earliest_revocation": {
+    "serial_number": "17",
+    "revoked_at": "2017-12-20 21:59:03 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "17",
+    "revoked_at": "2017-12-20 21:59:03 UTC",
+    "extensions": [
+
+    ]
+  }
 }

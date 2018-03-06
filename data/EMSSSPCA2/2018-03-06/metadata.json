@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=Entrust/OU=Certification Authorities/OU=Entrust Managed Services SSP CA",
+  "version": "1",
+  "last_update": "2018-03-06 10:00:29 UTC",
+  "next_update": "2018-03-08 10:00:29 UTC",
+  "revocations_count": 939878,
+  "earliest_revocation": {
+    "serial_number": "1224144005",
+    "revoked_at": "2012-02-27 02:21:24 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "1230913976",
+    "revoked_at": "2018-03-06 09:31:35 UTC",
+    "extensions": [
+
+    ]
+  }
+}
