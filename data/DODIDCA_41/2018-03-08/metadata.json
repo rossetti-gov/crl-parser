@@ -1,0 +1,34 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID CA-41",
+  "version": "1",
+  "last_update": "2018-03-09 00:00:07 UTC",
+  "next_update": "2018-03-16 01:00:00 UTC",
+  "revocations_count": 389299,
+  "earliest_revocation": {
+    "serial_number": "99",
+    "revoked_at": "2016-06-10 14:12:23 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20160610050000Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "2227394",
+    "revoked_at": "2018-03-08 23:59:58 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Key Compromise",
+        "critical": false
+      }
+    ]
+  }
+}
