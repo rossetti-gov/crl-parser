@@ -4,6 +4,7 @@ require "json"
 require "csv"
 require "pry"
 require "active_support/core_ext/object/try"
+#require "base64"
 
 class Parser
   attr_reader :crl_url, :overwrite_crl
@@ -20,8 +21,13 @@ class Parser
   def perform
     FileUtils.mkdir_p(data_dir)
     puts "PARSING #{crl_url} ..."
-    pp metadata
-    write_metadata_to_json
+    begin
+      pp metadata
+      write_metadata_to_json
+    rescue => e
+      puts "... OH, ENCOUNTERED AN ERROR: #{e.class} - #{e.message}"
+      write_error_to_json(e)
+    end
     puts "-------------------------------"
   end
 
@@ -29,6 +35,8 @@ class Parser
     @crl ||= download_crl
   end
 
+  # note: encountered a "nested asn1 error (OpenSSL::X509::CRLError)" when trying to parse http://sspweb.managed.entrust.com/CRLs/EMSSSPCA2.crl on 3/9/18
+  # ... need to investigate further (see https://stackoverflow.com/q/24263835/670433)
   def download_crl
     IO.copy_stream(open(crl_url), crl_filepath) unless File.exist?(crl_filepath) && !overwrite_crl?
     return OpenSSL::X509::CRL::new(File.read(crl_filepath))
@@ -77,6 +85,16 @@ class Parser
   def write_metadata_to_json
     File.open(metadata_filepath, "w") do |f|
       f.write(JSON.pretty_generate(metadata))
+    end
+  end
+
+  def error_filepath
+    File.join(data_dir, "errors.json")
+  end
+
+  def write_error_to_json(err)
+    File.open(error_filepath, "w") do |f|
+      f.write(JSON.pretty_generate({error: "#{err.class} - #{err.message}"}))
     end
   end
 end
