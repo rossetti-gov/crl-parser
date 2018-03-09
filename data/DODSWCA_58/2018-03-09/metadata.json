@@ -1,0 +1,30 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD SW CA-58",
+  "version": "1",
+  "last_update": "2018-03-09 08:00:02 UTC",
+  "next_update": "2018-03-16 17:00:00 UTC",
+  "revocations_count": 3,
+  "earliest_revocation": {
+    "serial_number": "33",
+    "revoked_at": "2017-12-20 22:22:13 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "5333334",
+    "revoked_at": "2018-01-10 13:19:29 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Key Compromise",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20180110131928Z",
+        "critical": false
+      }
+    ]
+  }
+}

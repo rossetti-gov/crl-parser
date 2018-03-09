@@ -1,0 +1,29 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD EMAIL CA-33",
+  "version": "1",
+  "last_update": "2018-03-09 08:00:00 UTC",
+  "next_update": "2018-03-16 17:00:00 UTC",
+  "revocations_count": 287465,
+  "earliest_revocation": {
+    "serial_number": "50",
+    "revoked_at": "2016-02-03 15:42:27 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "608169",
+    "revoked_at": "2018-03-09 07:56:22 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Superseded",
+        "critical": false
+      }
+    ]
+  }
+}

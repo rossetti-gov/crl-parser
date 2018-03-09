@@ -1,0 +1,9 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=ECA/OU=Certification Authorities/CN=IdenTrust ECA 5",
+  "version": "1",
+  "last_update": "2018-03-09 12:04:29 UTC",
+  "next_update": "2018-03-10 12:04:29 UTC",
+  "revocations_count": 0,
+  "earliest_revocation": null,
+  "latest_revocation": null
+}

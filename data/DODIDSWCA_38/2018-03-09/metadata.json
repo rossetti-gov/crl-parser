@@ -1,0 +1,25 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID SW CA-38",
+  "version": "1",
+  "last_update": "2018-03-09 08:00:00 UTC",
+  "next_update": "2018-03-16 17:00:00 UTC",
+  "revocations_count": 7980,
+  "earliest_revocation": {
+    "serial_number": "182",
+    "revoked_at": "2016-01-13 22:30:29 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Superseded",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "211154",
+    "revoked_at": "2018-03-08 20:07:01 UTC",
+    "extensions": [
+
+    ]
+  }
+}

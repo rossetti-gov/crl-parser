@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=WCF PKI/CN=DoD WCF Root CA 1",
+  "version": "1",
+  "last_update": "2018-03-06 15:03:11 UTC",
+  "next_update": "2018-04-10 15:03:11 UTC",
+  "revocations_count": 8,
+  "earliest_revocation": {
+    "serial_number": "7",
+    "revoked_at": "2015-11-09 21:10:07 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "5",
+    "revoked_at": "2017-06-13 18:17:22 UTC",
+    "extensions": [
+
+    ]
+  }
+}

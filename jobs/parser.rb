@@ -116,9 +116,77 @@ class Revocation
   end
 end
 
-crl_urls = [40, 41, 42, 43, 44, 49, 50, 51, 52].map{ |i|
-  "http://crl.disa.mil/crl/DODIDCA_#{i}.crl"
-}
+crl_urls = []
+
+# DISA/DOD (CAC) CRLs
+# this list reflects the contents of an "ALLCRLZIP" file obtained one-time from https://crl.disa.mil/getcrlzip?ALL+CRL+ZIP (which needs certain certs to access via the web)
+crl_urls += [
+  "http://crl.disa.mil/crl/DMDNSIGNINGCA_1.crl",
+  "http://crl.disa.mil/crl/DODCA_31.crl",
+  "http://crl.disa.mil/crl/DODCA_32.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_31.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_32.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_33.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_34.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_39.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_40.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_41.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_42.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_43.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_44.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_49.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_50.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_51.crl",
+  "http://crl.disa.mil/crl/DODEMAILCA_52.crl",
+  "http://crl.disa.mil/crl/DODIDCA_33.crl",
+  "http://crl.disa.mil/crl/DODIDCA_34.crl",
+  "http://crl.disa.mil/crl/DODIDCA_39.crl",
+  "http://crl.disa.mil/crl/DODIDCA_40.crl",
+  "http://crl.disa.mil/crl/DODIDCA_41.crl",
+  "http://crl.disa.mil/crl/DODIDCA_42.crl",
+  "http://crl.disa.mil/crl/DODIDCA_43.crl",
+  "http://crl.disa.mil/crl/DODIDCA_44.crl",
+  "http://crl.disa.mil/crl/DODIDCA_49.crl",
+  "http://crl.disa.mil/crl/DODIDCA_50.crl",
+  "http://crl.disa.mil/crl/DODIDCA_51.crl",
+  "http://crl.disa.mil/crl/DODIDCA_52.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_35.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_36.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_37.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_38.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_45.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_46.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_47.crl",
+  "http://crl.disa.mil/crl/DODIDSWCA_48.crl",
+  "http://crl.disa.mil/crl/DODINTEROPERABILITYROOTCA1.crl",
+  "http://crl.disa.mil/crl/DODINTEROPERABILITYROOTCA2.crl",
+  "http://crl.disa.mil/crl/DODNIPRINTERNALNPEROOTCA1.crl",
+  "http://crl.disa.mil/crl/DODNPEROOTCA1.crl",
+  "http://crl.disa.mil/crl/DODROOTCA2.crl",
+  "http://crl.disa.mil/crl/DODROOTCA3.crl",
+  "http://crl.disa.mil/crl/DODROOTCA4.crl",
+  "http://crl.disa.mil/crl/DODROOTCA5.crl",
+  "http://crl.disa.mil/crl/DODSWCA_53.crl",
+  "http://crl.disa.mil/crl/DODSWCA_54.crl",
+  "http://crl.disa.mil/crl/DODSWCA_55.crl",
+  "http://crl.disa.mil/crl/DODSWCA_56.crl",
+  "http://crl.disa.mil/crl/DODSWCA_57.crl",
+  "http://crl.disa.mil/crl/DODSWCA_58.crl",
+  "http://crl.disa.mil/crl/DODWCFROOTCA1.crl",
+  "http://crl.disa.mil/crl/ECAROOTCA2.crl",
+  "http://crl.disa.mil/crl/ECAROOTCA4.crl",
+  "http://crl.disa.mil/crl/IDENTRUSTECA4.crl",
+  "http://crl.disa.mil/crl/IDENTRUSTECA5.crl",
+  "http://crl.disa.mil/crl/IDENTRUSTECACOMPONENTS21.crl",
+  "http://crl.disa.mil/crl/IDENTRUSTECAS21.crl",
+  "http://crl.disa.mil/crl/ORCECA6.crl",
+  "http://crl.disa.mil/crl/ORCECAHW5.crl",
+  "http://crl.disa.mil/crl/ORCECASW5.crl",
+  "http://crl.disa.mil/crl/USDODCCEBINTEROPERABILITYROOTCA1.crl",
+  "http://crl.disa.mil/crl/USDODCCEBINTEROPERABILITYROOTCA2.crl"
+]
+
+# Entrust (PIV) CRLs
 crl_urls << "http://sspweb.managed.entrust.com/CRLs/EMSSSPCA2.crl"
 
 crl_urls.each do |crl_url|

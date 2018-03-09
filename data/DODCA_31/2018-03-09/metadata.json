@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD CA-31",
+  "version": "1",
+  "last_update": "2018-03-09 07:00:00 UTC",
+  "next_update": "2018-03-16 16:00:00 UTC",
+  "revocations_count": 710014,
+  "earliest_revocation": {
+    "serial_number": "1503587",
+    "revoked_at": "2014-08-19 00:00:35 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "2956155",
+    "revoked_at": "2018-02-27 16:50:53 UTC",
+    "extensions": [
+
+    ]
+  }
+}

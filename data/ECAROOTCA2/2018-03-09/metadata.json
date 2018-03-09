@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=ECA/CN=ECA Root CA 2",
+  "version": "1",
+  "last_update": "2018-02-20 15:09:31 UTC",
+  "next_update": "2018-03-27 15:09:31 UTC",
+  "revocations_count": 6,
+  "earliest_revocation": {
+    "serial_number": "25",
+    "revoked_at": "2015-12-01 16:05:35 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "18",
+    "revoked_at": "2017-06-20 14:46:12 UTC",
+    "extensions": [
+
+    ]
+  }
+}
