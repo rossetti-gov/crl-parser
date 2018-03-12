@@ -1,0 +1,25 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD SW CA-57",
+  "version": "1",
+  "last_update": "2018-03-12 08:00:00 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 3,
+  "earliest_revocation": {
+    "serial_number": "5",
+    "revoked_at": "2017-09-22 18:26:37 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "79",
+    "revoked_at": "2018-02-14 17:04:41 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      }
+    ]
+  }
+}

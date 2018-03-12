@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DoD Interoperability Root CA 1",
+  "version": "1",
+  "last_update": "2018-03-06 14:58:51 UTC",
+  "next_update": "2018-04-10 14:58:51 UTC",
+  "revocations_count": 6,
+  "earliest_revocation": {
+    "serial_number": "1405",
+    "revoked_at": "2015-12-01 17:39:56 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "517",
+    "revoked_at": "2017-06-08 19:23:12 UTC",
+    "extensions": [
+
+    ]
+  }
+}

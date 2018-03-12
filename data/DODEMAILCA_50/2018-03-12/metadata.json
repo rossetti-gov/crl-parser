@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD EMAIL CA-50",
+  "version": "1",
+  "last_update": "2018-03-12 14:12:28 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 1,
+  "earliest_revocation": {
+    "serial_number": "17",
+    "revoked_at": "2017-12-20 22:25:32 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "17",
+    "revoked_at": "2017-12-20 22:25:32 UTC",
+    "extensions": [
+
+    ]
+  }
+}

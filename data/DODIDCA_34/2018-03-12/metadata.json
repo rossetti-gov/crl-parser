@@ -1,0 +1,29 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID CA-34",
+  "version": "1",
+  "last_update": "2018-03-12 14:22:55 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 281600,
+  "earliest_revocation": {
+    "serial_number": "55",
+    "revoked_at": "2016-02-03 15:45:47 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "563032",
+    "revoked_at": "2018-03-12 14:21:23 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Superseded",
+        "critical": false
+      }
+    ]
+  }
+}

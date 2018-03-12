@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD EMAIL CA-32",
+  "version": "1",
+  "last_update": "2018-03-12 03:00:00 UTC",
+  "next_update": "2018-03-19 04:00:00 UTC",
+  "revocations_count": 586484,
+  "earliest_revocation": {
+    "serial_number": "3220316",
+    "revoked_at": "2015-05-11 13:20:47 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "2980609",
+    "revoked_at": "2018-03-06 17:22:41 UTC",
+    "extensions": [
+
+    ]
+  }
+}

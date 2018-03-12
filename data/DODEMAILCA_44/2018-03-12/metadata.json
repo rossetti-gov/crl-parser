@@ -1,0 +1,34 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD EMAIL CA-44",
+  "version": "1",
+  "last_update": "2018-03-08 08:00:00 UTC",
+  "next_update": "2018-03-15 17:00:00 UTC",
+  "revocations_count": 488720,
+  "earliest_revocation": {
+    "serial_number": "341",
+    "revoked_at": "2016-06-10 14:20:03 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20160610050000Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "1172041",
+    "revoked_at": "2018-03-08 07:57:35 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Superseded",
+        "critical": false
+      }
+    ]
+  }
+}

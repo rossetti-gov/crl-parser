@@ -1,0 +1,29 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=ECA/OU=Certification Authorities/CN=IdenTrust ECA 4",
+  "version": "1",
+  "last_update": "2018-03-12 03:43:43 UTC",
+  "next_update": "2018-03-13 03:43:43 UTC",
+  "revocations_count": 1793,
+  "earliest_revocation": {
+    "serial_number": "154184462147240446188357601529822881755",
+    "revoked_at": "2015-01-22 00:59:20 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Superseded",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "232439512921521375833047096534418511504",
+    "revoked_at": "2018-03-09 14:32:57 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Superseded",
+        "critical": false
+      }
+    ]
+  }
+}

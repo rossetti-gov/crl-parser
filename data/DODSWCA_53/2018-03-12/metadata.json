@@ -1,0 +1,25 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD SW CA-53",
+  "version": "1",
+  "last_update": "2018-03-12 08:00:00 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 42,
+  "earliest_revocation": {
+    "serial_number": "5",
+    "revoked_at": "2017-09-22 18:17:58 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "5333374",
+    "revoked_at": "2018-02-28 21:09:47 UTC",
+    "extensions": [
+      {
+        "oid": "invalidityDate",
+        "value": "..20180228210949Z",
+        "critical": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DoD Root CA 2",
+  "version": "1",
+  "last_update": "2018-03-06 14:49:34 UTC",
+  "next_update": "2018-04-10 14:49:34 UTC",
+  "revocations_count": 10,
+  "earliest_revocation": {
+    "serial_number": "1",
+    "revoked_at": "2006-03-22 13:52:45 UTC",
+    "extensions": [
+      {
+        "oid": "invalidityDate",
+        "value": "..20060321000000Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "1643",
+    "revoked_at": "2017-06-15 14:52:05 UTC",
+    "extensions": [
+
+    ]
+  }
+}

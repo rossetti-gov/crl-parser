@@ -1,0 +1,34 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=ECA/OU=Certification Authorities/CN=ORC ECA 6",
+  "version": "1",
+  "last_update": "2018-03-12 14:11:33 UTC",
+  "next_update": "2018-03-19 14:11:34 UTC",
+  "revocations_count": 2558,
+  "earliest_revocation": {
+    "serial_number": "71045043413577781656899428075284419264",
+    "revoked_at": "2015-12-09 22:10:35 UTC",
+    "extensions": [
+      {
+        "oid": "invalidityDate",
+        "value": "..20151209221026Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "257799908812404214148152951433597684389",
+    "revoked_at": "2018-03-09 19:48:23 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Affiliation Changed",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20180309194810Z",
+        "critical": false
+      }
+    ]
+  }
+}

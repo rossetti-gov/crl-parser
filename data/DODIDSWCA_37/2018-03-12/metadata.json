@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID SW CA-37",
+  "version": "1",
+  "last_update": "2018-03-12 08:00:00 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 9091,
+  "earliest_revocation": {
+    "serial_number": "18",
+    "revoked_at": "2015-12-16 20:15:14 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "197701",
+    "revoked_at": "2018-03-11 04:30:48 UTC",
+    "extensions": [
+
+    ]
+  }
+}

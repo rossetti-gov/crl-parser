@@ -1,0 +1,34 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID SW CA-46",
+  "version": "1",
+  "last_update": "2018-03-12 08:00:00 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 6,
+  "earliest_revocation": {
+    "serial_number": "24",
+    "revoked_at": "2016-06-14 20:00:14 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20160614050000Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "800",
+    "revoked_at": "2018-03-02 16:42:09 UTC",
+    "extensions": [
+      {
+        "oid": "invalidityDate",
+        "value": "..20180302060000Z",
+        "critical": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=US DoD CCEB Interoperability Root CA 1",
+  "version": "1",
+  "last_update": "2018-03-06 14:46:58 UTC",
+  "next_update": "2018-04-10 14:46:58 UTC",
+  "revocations_count": 6,
+  "earliest_revocation": {
+    "serial_number": "691",
+    "revoked_at": "2015-12-01 19:00:20 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "5",
+    "revoked_at": "2017-06-13 19:04:56 UTC",
+    "extensions": [
+
+    ]
+  }
+}

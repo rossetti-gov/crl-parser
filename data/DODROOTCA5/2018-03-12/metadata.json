@@ -1,0 +1,21 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DoD Root CA 5",
+  "version": "1",
+  "last_update": "2018-03-06 14:52:47 UTC",
+  "next_update": "2018-04-10 14:52:47 UTC",
+  "revocations_count": 6,
+  "earliest_revocation": {
+    "serial_number": "7",
+    "revoked_at": "2016-06-14 19:31:20 UTC",
+    "extensions": [
+
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "5",
+    "revoked_at": "2017-06-08 15:36:53 UTC",
+    "extensions": [
+
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "issuer": "/C=US/O=U.S. Government/OU=DoD/OU=PKI/CN=DOD ID SW CA-45",
+  "version": "1",
+  "last_update": "2018-03-12 08:00:00 UTC",
+  "next_update": "2018-03-19 17:00:00 UTC",
+  "revocations_count": 11279,
+  "earliest_revocation": {
+    "serial_number": "18",
+    "revoked_at": "2016-06-13 19:13:33 UTC",
+    "extensions": [
+      {
+        "oid": "CRLReason",
+        "value": "Cessation Of Operation",
+        "critical": false
+      },
+      {
+        "oid": "invalidityDate",
+        "value": "..20160613050000Z",
+        "critical": false
+      }
+    ]
+  },
+  "latest_revocation": {
+    "serial_number": "9481",
+    "revoked_at": "2018-03-11 19:47:15 UTC",
+    "extensions": [
+
+    ]
+  }
+}
