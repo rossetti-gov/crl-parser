@@ -88,3 +88,12 @@ File sizes:
   + `revocations.json`: 75M (with extensions)
   + `revocations.csv`: 9.1M (without extensions)
   + `revocations.csv`: 21M (with extensions)
+
+## Entrust CRLs
+
+  + [Entrust CRL Form](http://www.entrust.net/customer/crl_form.cfm?resellernum=1456154)
+  + [Entrust Datacard Developer APIs](https://www.entrustdatacard.com/resource-center/developer-apis/)
+
+> Certificates will appear on our CRL within 24 hours after they have been revoked. Revoked certificates are no longer trusted for a variety of reasons (for example, the password that protects the corresponding private key has been compromised).
+>
+> You should not establish a secure session with a Web site that is using a revoked certificate.
